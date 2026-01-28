@@ -1,0 +1,20 @@
+services:
+
+    async-transfer-sftp:
+        container_name: async-transfer-sftp
+        build: .
+        command: bash -c "run-upload.sh && run-download.sh"
+        mem_limit: 20M
+        environment:
+            - CRON_SCHEDULE=* * * * *
+            - SERVER_IDENTITY=
+            - |
+                SERVER_KEY=
+            - SERVER_URL=
+        read_only: true
+        tmpfs:
+            - /media/cron
+            - /run
+            - /tmp:exec
+        volumes:
+            - "./data-local:/media/async-transfer"
