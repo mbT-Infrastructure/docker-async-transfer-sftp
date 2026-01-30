@@ -10,6 +10,7 @@ COPY files/async-transfer-env.sh /opt/async-transfer-sftp/templates/
 COPY files/entrypoint.sh files/run-download.sh files/run-upload.sh /usr/local/bin/
 
 ENV CRON_SCHEDULE="0 2 * * *"
+ENV LOG_LEVEL="INFO"
 ENV MAX_BANDWIDTH=0
 ENV REMOTE_DOWNLOAD_DIR="async-transfer/outgoing"
 ENV REMOTE_UPLOAD_DIR="async-transfer/incoming"

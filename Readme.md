@@ -16,6 +16,8 @@ meaning files are deleted from the source after successful transfer.
 
 - `CRON_SCHEDULE`
     - The time to start the download and upload as cron schedule.
+- `LOG_LEVEL`
+    - Set log level for rclone.
 - `MAX_BANDWIDTH`
     - Limit the upload and download bandwidth, for example `10M` for 10 MB/s.
 - `REMOTE_DOWNLOAD_DIR`
