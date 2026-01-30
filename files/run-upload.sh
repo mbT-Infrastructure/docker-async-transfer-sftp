@@ -28,4 +28,5 @@ fi
 
 echo "Start uploading to \"${REMOTE_UPLOAD_DIR}\""
 
-rclone moveto "/media/async-transfer/outgoing" ":sftp:$REMOTE_UPLOAD_DIR"
+rclone moveto "/media/async-transfer/outgoing" ":sftp:$REMOTE_UPLOAD_DIR" 2>&1 \
+    | sed 's/\s\{2,\}\(:\)/ Upload\1/' >&2

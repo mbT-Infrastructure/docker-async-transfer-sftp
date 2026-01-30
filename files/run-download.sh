@@ -28,4 +28,5 @@ fi
 
 echo "Start downloading from \"${REMOTE_DOWNLOAD_DIR}\""
 
-rclone moveto ":sftp:$REMOTE_DOWNLOAD_DIR" "/media/async-transfer/incoming"
+rclone moveto ":sftp:$REMOTE_DOWNLOAD_DIR" "/media/async-transfer/incoming" 2>&1 \
+    | sed 's/\s\{2,\}\(:\)/ Download\1/' >&2

@@ -4,7 +4,7 @@ services:
         container_name: async-transfer-sftp
         build: .
         command: bash -c "run-upload.sh && run-download.sh"
-        mem_limit: 20M
+        mem_limit: 100M
         environment:
             - CRON_SCHEDULE=* * * * *
             - MAX_BANDWIDTH=02:00,off 06:00,10K
