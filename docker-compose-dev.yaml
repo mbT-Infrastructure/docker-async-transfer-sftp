@@ -7,6 +7,7 @@ services:
         mem_limit: 20M
         environment:
             - CRON_SCHEDULE=* * * * *
+            - MAX_BANDWIDTH=02:00,off 06:00,10K
             - SERVER_IDENTITY=
             - |
                 SERVER_KEY=
