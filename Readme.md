@@ -20,6 +20,8 @@ meaning files are deleted from the source after successful transfer.
     - Set log level for rclone.
 - `MAX_BANDWIDTH`
     - Limit the upload and download bandwidth, for example `10M` for 10 MB/s.
+- `NUM_TRANSFERS`
+    - Number of file transfers to run in parallel.
 - `REMOTE_DOWNLOAD_DIR`
     - The directory on the remote SFTP server to download files from.
 - `REMOTE_UPLOAD_DIR`

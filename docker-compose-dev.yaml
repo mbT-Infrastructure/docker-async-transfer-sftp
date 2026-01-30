@@ -8,6 +8,7 @@ services:
         environment:
             - CRON_SCHEDULE=* * * * *
             - MAX_BANDWIDTH=02:00,off 06:00,10K
+            - NUM_TRANSFERS=2
             - SERVER_IDENTITY=
             - |
                 SERVER_KEY=
